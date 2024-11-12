@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Doctors</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        th {
+            background-color: #f0f0f0;
+        }
+
+        td:last-child {
+            border-right: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Doctors List</h1>
+    <table>
+        <tr>
+            <th>Doctor Id</th>
+            <th>Doctor Name</th>
+            <th>Specialty</th>
+            <th>Contact</th>
+        </tr>
+        {% for doctor in doctors %}
+        <tr>
+            <td>{{ doctor[0] }}</td>
+            <td>{{ doctor[1] }}</td>
+            <td>{{ doctor[2] }}</td>
+            <td>{{ doctor[3] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
